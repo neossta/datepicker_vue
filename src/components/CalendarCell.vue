@@ -1,66 +1,66 @@
 <template>
-    <div :class="['calendar-cell', { 'today': isToday, 'selected': isSelected }]" @click="handleClick">
-        <div class='day-number'>
-            {{ number }}
-        </div>
-    </div>
+	<div :class="['calendar-cell', { today: isToday, selected: isSelected }]" @click="handleClick">
+		<div class="day-number">
+			{{ props.date.getDate() }}
+		</div>
+	</div>
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue'
+import { defineEmits } from 'vue'
 
 const props = defineProps({
-    number: {
-        type: Number,
-        required: true
-    },
-    isToday: {
-        type: Boolean,
-        default: false
-    },
-    isSelected: {
-        type: Boolean,
-        default: false
-    }
+	date: {
+		type: Date,
+		required: true,
+	},
+	isToday: {
+		type: Boolean,
+		default: false,
+	},
+	isSelected: {
+		type: Boolean,
+		default: false,
+	},
 })
 
 const emit = defineEmits(['date-click'])
 
 const handleClick = () => {
-    const date = new Date()
-    date.setDate(props.number)
-    emit('date-click', date)
+	emit('date-click', props.date)
 }
 </script>
 
 <style scoped>
 .calendar-cell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #e5e7eb;
-    cursor: pointer;
-    padding: 0.25rem;
-    transition: background-color 0.2s;
-    aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  cursor: pointer;
+  padding: 0.25rem;
+  transition: background-color 0.2s;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-background);
 }
 
 .calendar-cell:hover {
-    background-color: #8eccff58;
+  background-color: var(--color-primary-transparent);
 }
 
 .day-number {
-    display: flex;
-    font-size: 0.85rem;
+  display: flex;
+  font-size: 0.85rem;
+  color: var(--color-text);
 }
 
 .today {
-    border-color: #8eccff;
-    border-width: 1.5px;
+  border-color: var(--color-primary-light);
+  border-width: 1.5px;
 }
 
 .selected {
-    background-color: #8eccff58;
+  background-color: var(--color-primary-transparent);
 }
 </style>

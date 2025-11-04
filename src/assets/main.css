@@ -6,9 +6,12 @@
   font-weight: normal;
 }
 
+h4 {
+  padding-bottom: 1rem;
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex;
-    /* place-items: center; */
   }
 }

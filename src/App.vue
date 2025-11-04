@@ -1,26 +1,39 @@
 <script setup lang="ts">
-import Calendar from './components/Calendar.vue'
+import DatePicker from './components/DatePicker.vue'
 import { ref } from 'vue'
 
-const currentDate = ref(new Date())
+const specificDate = ref('2024-03-15')
 
-const handleDateChange = (dateInfo: Date) => {
-  console.log('дата:', dateInfo)
+const handleDateChange = (selectedDate: Date) => {
+	console.log('дата:', selectedDate)
+	return selectedDate
 }
 </script>
 
 <template>
-  <main>
-    <div class="wrapper">
-      <Calendar v-model:date="currentDate" @change="handleDateChange"  />
-    </div>
-  </main>
+	<main>
+		<h2>Примеры использования</h2>
+		<div class="wrapper">
+			<div>
+				<h4>Без переданной даты, русский язык по умолчанию:</h4>
+				<DatePicker @change="handleDateChange" />
+			</div>
+			<div>
+				<h4>Смена языка на английский, передается дата в формате "год-месяц-день" :</h4>
+				<DatePicker v-model:date="specificDate" @change="handleDateChange" :locale="'en'" />
+			</div>
+		</div>
+	</main>
 </template>
 
 <style scoped>
 @media (min-width: 1024px) {
-  .wrapper {
-    padding: 20px;
-  }
+	.wrapper {
+		display: flex;
+		padding-top: 20px;
+	}
+	.wrapper > div {
+		padding-right: 6rem;
+	}
 }
 </style>

@@ -1,0 +1,88 @@
+import type { IMonthDictionaryObj } from './types'
+
+export const MonthDictionary: IMonthDictionaryObj[] = [
+	{
+		value: 0,
+		label: { ru: 'Январь', en: 'January' },
+		shortLabel: { ru: 'янв', en: 'Jan' },
+		countLabel: { ru: 'января', en: 'of January' },
+		days: 31,
+	},
+	{
+		value: 1,
+		label: { ru: 'Февраль', en: 'February' },
+		shortLabel: { ru: 'фев', en: 'Feb' },
+		countLabel: { ru: 'февраля', en: 'of February' },
+		days: 28,
+	},
+	{
+		value: 2,
+		label: { ru: 'Март', en: 'March' },
+		shortLabel: { ru: 'март', en: 'Mar' },
+		countLabel: { ru: 'марта', en: 'of March' },
+		days: 31,
+	},
+	{
+		value: 3,
+		label: { ru: 'Апрель', en: 'April' },
+		shortLabel: { ru: 'апр', en: 'Apr' },
+		countLabel: { ru: 'апреля', en: 'of April' },
+		days: 30,
+	},
+	{
+		value: 4,
+		label: { ru: 'Май', en: 'May' },
+		shortLabel: { ru: 'май', en: 'May' },
+		countLabel: { ru: 'мая', en: 'of May' },
+		days: 31,
+	},
+	{
+		value: 5,
+		label: { ru: 'Июнь', en: 'June' },
+		shortLabel: { ru: 'июнь', en: 'Jun' },
+		countLabel: { ru: 'июня', en: 'of June' },
+		days: 30,
+	},
+	{
+		value: 6,
+		label: { ru: 'Июль', en: 'July' },
+		shortLabel: { ru: 'июль', en: 'Jul' },
+		countLabel: { ru: 'июля', en: 'of July' },
+		days: 31,
+	},
+	{
+		value: 7,
+		label: { ru: 'Август', en: 'August' },
+		shortLabel: { ru: 'авг', en: 'Aug' },
+		countLabel: { ru: 'августа', en: 'of August' },
+		days: 31,
+	},
+	{
+		value: 8,
+		label: { ru: 'Сентябрь', en: 'September' },
+		shortLabel: { ru: 'сен', en: 'Sep' },
+		countLabel: { ru: 'сентября', en: 'of September' },
+		days: 30,
+	},
+	{
+		value: 9,
+		label: { ru: 'Октябрь', en: 'October' },
+		shortLabel: { ru: 'окт', en: 'Oct' },
+		countLabel: { ru: 'октября', en: 'of October' },
+		days: 31,
+	},
+	{
+		value: 10,
+		label: { ru: 'Ноябрь', en: 'November' },
+		shortLabel: { ru: 'ноя', en: 'Nov' },
+		countLabel: { ru: 'ноября', en: 'of November' },
+		days: 30,
+	},
+	{
+		value: 11,
+		label: { ru: 'Декабрь', en: 'December' },
+		shortLabel: { ru: 'дек', en: 'Dec' },
+		countLabel: { ru: 'декабря', en: 'of December' },
+		days: 31,
+	},
+]
