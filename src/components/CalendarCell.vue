@@ -33,34 +33,34 @@ const handleClick = () => {
 
 <style scoped>
 .calendar-cell {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--color-border);
-  cursor: pointer;
-  padding: 0.25rem;
-  transition: background-color 0.2s;
-  aspect-ratio: 1 / 1;
-  background-color: var(--color-background);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--color-border);
+	cursor: pointer;
+	padding: 0.25rem;
+	transition: background-color 0.2s;
+	aspect-ratio: 1 / 1;
+	background-color: var(--color-background);
 }
 
 .calendar-cell:hover {
-  background-color: var(--color-primary-transparent);
+	background-color: var(--color-primary-transparent);
 }
 
 .day-number {
-  display: flex;
-  font-size: 0.85rem;
-  color: var(--color-text);
+	display: flex;
+	font-size: 0.85rem;
+	color: var(--color-text);
 }
 
 .today {
-  border-color: var(--color-primary-light);
-  border-width: 1.5px;
+	border-color: var(--color-primary-light);
+	border-width: 1.5px;
 }
 
 .selected {
-  background-color: var(--color-primary-transparent);
+	background-color: var(--color-primary-transparent);
 }
 </style>
